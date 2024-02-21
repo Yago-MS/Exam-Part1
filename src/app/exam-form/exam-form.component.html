@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Create employee</h1>
+  <h2 class="text-black">(object properties)</h2>
+  <form #ExamForm="ngForm" (ngSubmit)="submitEmployee()">
+    <p>
+      <label>Name:</label>
+      <input type="text"
+             [(ngModel)]="employee.name" name="name" required>
+    </p>
+    <p>
+      <label>Surname:</label>
+      <input type="text"
+             [(ngModel)]="employee.surname" name="surname" required>
+    </p>
+    <p>
+      <label>Position:</label>
+      <input type="text"
+             [(ngModel)]="employee.position" name="position" required>
+    </p>
+    <p>
+      <label>Salary:</label>
+      <input type="text"
+             [(ngModel)]="employee.salary" name="salary" required>
+    </p>
+    <p>
+      <button type="submit" [disabled]="!validateForm()">Submit</button>
+    </p>
+  </form>
+</div>
